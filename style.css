@@ -103,7 +103,7 @@
 }
 .headerText button {
   padding: 1.2rem 2rem;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
   font-family: "Poppins", sans-serif;
@@ -356,7 +356,7 @@ footer .footer .f-third .f-social i
 
 
 
-@media screen (max-width: 500px) {
+@media screen and (max-width: 412px) {
   .navbar {
     width: 100% !important;
     height: 11vh !important;

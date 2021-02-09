@@ -10,6 +10,8 @@
 
 font-family: 'Noto Sans KR', sans-serif;       // bold text-heading
 font-family: 'Poppins', sans-serif;           // smal-fonts
+font-family: 'Dancing Script', cursive;       // cursive
+
 
 */
 
@@ -118,8 +120,6 @@ header .main {
 header .main .m-left img {
   height: 70vh;
 }
-header .main .m-right {
-}
 header .main .m-right h1 {
   font-size: 55px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -156,7 +156,90 @@ header .main .m-right button:hover
   color: var(--red);
   font-weight: 600;
 }
+/* main secton*/
+main .reg
+{
+  height: 80vh;
+  background: var(--light);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10vh;
+}
+main .reg .r-form
+{
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .reg .r-form h1
+{
+  font-size: 50px;
+  font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif; 
+  text-transform: uppercase;
+}
+main .reg .r-form p
+{
+  font-size: 40px;
+  font-family: 'Dancing Script', cursive;
+  color: var(--red);
+}
+main .reg .r-form input
+{
+  width: 40%;
+  height: 7vh;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--red);
+  background: var(--red);
+  color: #ddd;
+  font-size: 25px;
+  border-radius: 25px;
+  padding: 1rem;
+  margin-top: 5vh;
+  font-family: 'Dancing Script', cursive;
+}
+main .reg .r-form input::placeholder
+{
+  color: var(--light);
+  font-size: 25px;
+  font-family: 'Dancing Script', cursive;
+}
+main .reg .r-form button
+{
+  background: var(--light);
+  border: 2px solid var(--red);
+  border-radius: 7px;
+  padding: 1rem 2rem;
+  color: var(--red);
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;  
+  font-weight: 600;
+  margin-top: 5vh;
+  outline: none;
+}
+main .reg .r-form button:hover
+{
+  color: var(--light);
+  background-color: var(--red);
+}
 
+main .reg .r-img
+{
+  /* border: 1px solid black; */
+
+  width: 60%;
+  height: 100%;
+}
+main .reg .r-img img
+{
+  margin-left: 10vh;
+  margin-top: 5vh;
+}
 /* why we section start*/
 
 #we {
@@ -302,6 +385,37 @@ footer .footer .f-third .f-social i {
       padding-left: 10px;
     }
     header .main .m-left img
+    {
+      display: none;
+    }
+
+    /*main*/
+    main .reg
+    {
+      height: 100vh;
+    }
+    main .reg .r-form
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    main .reg .r-form h1
+    {
+      font-size: 50px;
+    
+    }
+    main .reg .r-form p
+    {
+      font-size: 30px;
+      text-align: justify;
+      padding-top: 25px;
+    }
+    main .reg .r-form input
+    {
+      width: 100%;
+    }
+
+    main .reg .r-img
     {
       display: none;
     }

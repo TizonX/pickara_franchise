@@ -459,9 +459,18 @@ footer .footer .f-third .f-social i {
     margin: 20px 20px;
   }
   /* registration */
+  .registration
+  {
+    height: 100vh !important;
+  }
   .registration .center
     {
-        width: 95%;
+        width: 95% !important;
+        height: 100vh !important;
+    }
+    .registration .center h1 
+    {
+      font-size: 40px;
     }
     .registration .center input
     {

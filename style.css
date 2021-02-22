@@ -611,7 +611,7 @@ footer .footer .f-third .f-social i {
   .franchaise-box {
     height: 190vh;
     flex-direction: column;
-    top: 100%;
+    top: 10%;
   }
   /*main*/
   main .reg {

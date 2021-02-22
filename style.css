@@ -201,7 +201,7 @@ header .main .m-right button:hover {
   text-align: center;
   color: silver;
   padding: 10px;
-  font-family: 'Dancing Script', cursive;  
+  font-family: "Dancing Script", cursive;
   font-weight: 200;
 }
 .franchaise .center .content p {
@@ -210,7 +210,7 @@ header .main .m-right button:hover {
   color: silver;
   padding: 30px;
   letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;   
+  font-family: "Poppins", sans-serif;
 }
 .franchaise .center .content button {
   margin-top: 20px;
@@ -228,6 +228,94 @@ header .main .m-right button:hover {
   color: silver;
   border: 2px solid silver;
 }
+
+/*  tyoe of Franchaise  */
+#FT
+{
+  position: relative;
+}
+.fra-box-model {
+  width: 100%;
+  height: 90vh;
+  background-color: silver;
+  background-image: url("./img/fire.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px);
+  opacity: 0.9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.fra-box-model .fra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+.franchaise-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70vh;
+  /* border: 2px solid rgb(94, 93, 93);
+  box-shadow: 0px 5px 15px rgba(214, 211, 211, 0.5); */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.franchaise-box .box {
+  width: 40vh;
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.franchaise-box .box h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  font-family: sans-serif;
+  padding: 20px 20px;
+  text-align: center;
+}
+.franchaise-box .box ol {
+  list-style: none;
+}
+.franchaise-box .box ol li {
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 100;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  padding: 7px 7px;
+}
+.franchaise-box .box a {
+  text-decoration: none;
+  color: #c93134;
+  font-size: 20px;
+  float: left;
+  padding-left: 150px;
+  transition: 0.5s;
+  outline: none;
+  background: none;
+}
+.franchaise-box .box a:hover {
+  color: silver;
+}
+
 /* main secton*/
 main .reg {
   height: 80vh;
@@ -310,7 +398,10 @@ main .reg .r-img img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #383838;
+  /* background-color: #383838; */
+  background-image: url(./img/sinPro.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .background .box {
   width: 20%;
@@ -353,7 +444,11 @@ main .reg .r-img img {
 .registration {
   width: 100%;
   height: 100vh;
-  background-color: #404040;
+  /* background-color: #404040; */
+  background-image: url("./img/ring.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,6 +477,11 @@ main .reg .r-img img {
   background: none;
   width: 60%;
   height: 5vh;
+
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 2vh;
+  color: #888888;
 }
 .registration .center input::placeholder {
   font-size: 18px;
@@ -500,6 +600,18 @@ footer .footer .f-third .f-social i {
   }
   .franchaise .center .content p {
     font-size: 20px;
+  }
+  /* TYpe of franchaise*/
+  .fra-box-model {
+    height: 190vh;
+  }
+  .fra-box-model .fra {
+    height: 190vh;
+  }
+  .franchaise-box {
+    height: 190vh;
+    flex-direction: column;
+    top: 100%;
   }
   /*main*/
   main .reg {

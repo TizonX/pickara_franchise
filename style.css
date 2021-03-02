@@ -20,94 +20,81 @@ font-family: 'Dancing Script', cursive;       // cursive
   --gray: #ddd;
   --light: #f8f9fa;
 }
-nav {
-  background: transparent;
-  height: 80px;
-  width: 100%;
-  z-index: 111;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-}
-label.logo {
-  color: var(--red);
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 100px;
-  font-weight: bold;
-}
-nav ul {
-  float: right;
-  margin-right: 20px;
-}
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-nav ul li a {
-  color: var(--red);
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-a.active,
-a:hover {
-  background: var(--red);
-  color: white;
-  transition: 0.5s;
-}
-.checkbtn {
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
+.up {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  position: fixed;
+  top: 90vh;
+  left: 90%;
+  background: white;
+  z-index: 112;
   cursor: pointer;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
 }
-#check {
-  display: none;
+.up a
+{
+  outline: none;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 10px;
 }
-@media (max-width: 952px) {
-  label.logo {
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a {
-    font-size: 16px;
-  }
+nav {
+  width: 100%;
+  height: 8vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border-bottom: 1px solid gray; */
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  /* border: rgba(214, 60, 60, 0.5); */
+  background: var(--light);
+  z-index: 111;
 }
-@media (max-width: 858px) {
-  .checkbtn {
-    display: block;
-  }
-  ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-  }
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  a:hover,
-  a.active {
-    background: none;
-    color: #0082e6;
-  }
-  #check:checked ~ ul {
-    left: 0;
-  }
+nav .logo {
+  width: 8vh;
+  height: 8vh;
+  background-image: url("./img/p_logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px;
+
+  margin: 5px 5px;
+}
+nav .list {
+  width: 35%;
+  height: 8vh;
+  /* border: 1px solid black; */
+}
+nav .list ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+nav .list ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #c93134;
+  padding: 10px 10px;
+  line-height: 8vh;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+nav .list ul li a:hover {
+  background: #c93134;
+  color: white;
 }
 
 /* header */
@@ -230,15 +217,14 @@ header .main .m-right button:hover {
 }
 
 /*  tyoe of Franchaise  */
-#FT
-{
+#FT {
   position: relative;
 }
 .fra-box-model {
   width: 100%;
   height: 90vh;
   background-color: silver;
-  background-image: url("./img/fire.jpg");
+  background-image: url("./img/black.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(8px);
@@ -255,7 +241,7 @@ header .main .m-right button:hover {
   left: 0;
   width: 100%;
   height: 90vh;
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
 }
 .franchaise-box {
   position: absolute;
@@ -264,8 +250,8 @@ header .main .m-right button:hover {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 70vh;
-  /* border: 2px solid rgb(94, 93, 93);
-  box-shadow: 0px 5px 15px rgba(214, 211, 211, 0.5); */
+  border: 2px solid rgb(94, 93, 93);
+  box-shadow: 0px 5px 15px rgba(214, 211, 211, 0.5);
 
   display: flex;
   justify-content: space-around;
@@ -391,54 +377,6 @@ main .reg .r-img img {
   margin-top: 5vh;
 }
 
-/*  merchant section start*/
-.background {
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* background-color: #383838; */
-  background-image: url(./img/sinPro.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-.background .box {
-  width: 20%;
-  height: 30vh;
-  border: 1px solid #d3d3d3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  box-shadow: 1px 2px 15px #d3d3d3;
-}
-.background .box img {
-  width: 50%;
-}
-.background .box:hover .overlap {
-  height: 100%;
-}
-.overlap {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--red);
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: 0.5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: var(--gray);
-  font-size: 30px;
-  font-weight: 400;
-  font-style: italic;
-  text-shadow: 1px 2px 3px silver;
-}
 /*  Registration  section start */
 
 .registration {
@@ -578,6 +516,10 @@ footer .footer .f-third .f-social i {
 }
 
 @media screen and (max-width: 500px) {
+  /*  navbar  */
+  nav {
+    display: none;
+  }
   /*header*/
   header .main {
     padding-left: 10px;
@@ -612,6 +554,10 @@ footer .footer .f-third .f-social i {
     height: 190vh;
     flex-direction: column;
     top: 50%;
+
+    border: none;
+  box-shadow: none;
+
   }
   /*main*/
   main .reg {
@@ -636,16 +582,7 @@ footer .footer .f-third .f-social i {
   main .reg .r-img {
     display: none;
   }
-  .background {
-    height: 100%;
-    padding: 20px 20px;
-    flex-direction: column;
-  }
-  .background .box {
-    width: 80%;
-    height: 40vh;
-    margin: 20px 20px;
-  }
+
   /* registration */
   .registration {
     height: 100vh !important;
@@ -673,4 +610,365 @@ footer .footer .f-third .f-social i {
   footer .footer .f-third .f-social {
     flex-direction: row;
   }
+}
+
+.franchise-contant {
+  width: 100%;
+  height: 100vh;
+  background: #ddd;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.franchise-contant .center-div {
+  width: 100%;
+  height: 100vh;
+
+  border: 1px solid black;
+
+  background: transparent;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.franchise-contant .center-div .fra-head {
+  width: 100%;
+  height: 10%;
+  background: red;
+}
+.franchise-contant .center-div .fra-head h1 {
+  line-height: 42px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 400;
+  font-family: sans-serif;
+  padding: 20px 20px;
+
+  color: #fff;
+  /* writing-mode: vertical-rl;  */
+}
+.franchise-contant .center-div .fra-contant {
+  width: 100%;
+  height: 80%;
+  margin-top: 40px;
+  /* border: 1px solid black; */
+}
+.franchise-contant .center-div .fra-contant p {
+  font-size: 20px;
+
+  padding: 15px 20px;
+
+  text-align: justify;
+
+  font-family: sans-serif;
+
+  color: #696969;
+}
+
+@media screen and (max-width: 500px) {
+  .franchise-contant {
+    height: 110vh;
+  }
+  .franchise-contant .center-div {
+    height: 110vh;
+  }
+  .franchise-contant .center-div .fra-head h1 {
+    font-size: 25px;
+  }
+  .franchise-contant .center-div .fra-contant p {
+    font-size: 18px;
+    padding: 12px 0px;
+    text-align: left;
+  }
+}
+
+
+/*   Admin Panel start all 
+
+
+Responsive is also started in end
+
+*/
+
+.admin-nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-nav  .admin-name
+{
+    font-family: sans-serif;
+}
+.admin-nav .admin-name, .admin-options
+{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-nav .admin-options ul
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.admin-nav .admin-options ul li a
+{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: brown;
+    padding: 10px 10px;
+    border-radius: 3px;
+    transition: .5s;
+}
+.admin-nav .admin-options ul li a:hover
+{
+    background: brown;
+    color: white;
+}
+
+/*  Responsice table*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 60%;
+    border: 1px solid #ddd;
+
+    margin-top: 120px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    font-family: sans-serif;
+  }
+  td button
+  {
+    padding: 7px 6px;
+    color: white;
+    background-color: brown;
+    outline: none;
+    border: none;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+
+/**==============================================================================*/
+
+/*  create_new_admin */
+
+.form
+{
+    width: 100%;
+    height: 80vh;
+    /* background-color: gray; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.form .logo
+{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+
+    background-image: url('./img/p_logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form form
+{
+    /* border: 1px solid black; */
+    width: 40%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.form form input
+{
+    width: 60%;
+    height: 5vh;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid brown;
+    font-size: 16px;
+    padding-left: 10px;
+    color: brown;
+}
+.form form input::placeholder
+{
+    color: brown;
+    padding-left: 10px;
+}
+.form form input[type="submit"]
+{
+    background-color: brown;
+    color: white;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+
+
+/**==============================================================================*/
+
+/*===================================*/
+
+/*   Login .html*/
+
+.login
+{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login .logo
+{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+
+    background-image: url('./img/p_logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login form
+{
+    /* border: 1px solid black; */
+    width: 40%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.login form input
+{
+    width: 60%;
+    height: 5vh;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid brown;
+    font-size: 16px;
+    padding-left: 10px;
+    color: brown;
+}
+.login form input::placeholder
+{
+    color: brown;
+    padding-left: 10px;
+}
+.login form input[type="submit"]
+{
+    background-color: brown;
+    color: white;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+.login .forget-pass 
+{
+    width: 24%;
+}
+.login .forget-pass a
+{
+    text-decoration: none;
+    float: right;
+    margin-top: 20px;
+}
+
+/*===================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*===================================*/
+
+/* Forget password/ reset-password*/
+
+.login .text
+{
+    width: 35%;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    color: red;
+}
+
+
+/*===================================*/
+
+@media screen and (max-width:500px)
+{
+    .admin-nav .admin-name
+    {
+        display: none;
+    }
+    .admin-nav .admin-options ul
+    {
+        width: 100% !important;
+
+    }
+    .admin-nav .admin-options ul li a
+    {
+        font-size: 11px;
+    }
+    /*  create_new_admin */
+
+    .form form
+    {
+        width: 100% !important;
+    }
+    .form form input
+    {
+        width: 80% !important;
+    }
+    /* table */
+    table
+    {
+        width: 98% !important;
+    }
+    /* login */
+    .login form
+    {
+        width: 100% !important;
+    }
+    .login form input
+    {
+        width: 80% !important;
+    }
+    .login .forget-pass 
+    {
+        width: 85% !important;
+    }
+    /* reset password*/
+    .login .text
+    {
+        width: 90% !important;
+    }
 }
